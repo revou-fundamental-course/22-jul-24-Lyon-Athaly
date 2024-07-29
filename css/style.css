@@ -1,11 +1,70 @@
+/* css box model reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/* Main syle */
+
+/* body style */
+body {
+    background-image: url(../bg.jpg);
+    background-position: center;
+}
+/* </> */
+
+/* Navigation style */
 nav {
     display: flex;
     justify-content: space-between;
     border: 2px solid black;
-    height: 30px;
+    height: 50px;
     margin: 0;
     padding: 5px;
     align-items: center;
+    background-color: rgb(255, 71, 71);
 }
 
 header {
@@ -13,42 +72,216 @@ header {
     height: 100%;
 }
 
-section a{
+.nav-section a{
     padding: 5px;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-left: -10px;
     border: 1px solid greenyellow;
     border-radius: 3px;
-    background-color: rgb(200, 236, 248);
+    background-color: rgb(255, 226, 226);
 }
 
-section a:hover {
-    color: red;
+.nav-section a:hover {
+    color: rgb(255, 255, 255);
     font-size: larger;    
     display: inline;
-    background-color: lightcoral;
+    background-color: rgb(150, 0, 0);
 }
 
-main{
+
+/* Main content style */
+
+.konten{
+    padding-top: 40px;
     border: yellow 3px solid;
     display: flex;
     justify-content: center;
 }
 
 article {
-    border: green 1px solid;
+    border: green 3px solid;
+    margin-right: 50px;
+    width: 500px;
+}
+
+.judul-konten {
+    border: 2px gray solid;
+    text-align: center;
+    background-color: #3a50d9;
+    background-image: url(../wta.jpg);
+    background-size: cover;
+    color: #e0eff2;
+  	font-style: italic;
+ 	font-weight: bold;
+  	font-family: georgia;
+}
+
+.judul-konten h1 {
+    font-size: 40px;
+  	text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
+}
+
+.judul-konten p {
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.gambar-konten {
+    border: 2px grey solid;
+    height: 250px;
+    background-image: url(../wlp.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.deskripsi-konten {
+    border: 2px solid grey;
+    
+}
+
+
+/* Form Style */
+* {
+    margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .form {
-    border: lightgreen 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(2693171.jpg) no-repeat;
+    background-position: center;
+    
 }
 
+.form-section {
+    width: 420px;
+    background: purple;
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    transition: .5s;
+}
 
+.form-section:hover{
+    backdrop-filter: blur(20px);
+    width: 500px;
+}
+
+.form-section h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.form-section .inputbox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none ;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.inputbox input::placeholder {
+    color: #fff;
+}
+
+.inputbox img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.form-section .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: -15px 0 15px;
+}
+
+.remember-forget label input {
+    accent-color: #fff;
+    margin-right: 5px;
+}
+
+.remember-forget a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+    color: rgb(71, 71, 255);
+}
+
+.form-section .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-section .login-link {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0 10px;
+}
+
+.form-section .login-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-section .login-link p a:hover {
+    text-decoration: underline;
+    color: rgb(71, 71, 255);
+}
+/* </> */
+
+
+
+.package {
+    height: 300px;
+    border: 3px darkmagenta solid;
+}
+
+ul {
+    border: 3px blue solid;
+}
 
 footer {
     text-align: center;
     color: white;
     width: 100%;
-    height: 30px;
+    height: 80px;
     display: block;
     background-color: black;
 }
