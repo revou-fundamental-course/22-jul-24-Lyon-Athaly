@@ -50,7 +50,7 @@ table {
 
 /* body style */
 body {
-    background-image: url(../bg.jpg);
+    background-image: url(../image/bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -60,24 +60,30 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    border: 2px solid black;
     height: 50px;
     margin: 0;
     padding: 5px;
-    align-items: center;
-    background-color: rgb(255, 71, 71);
+    align-items: center;  
+    background: linear-gradient(#330a6a, #4f26aa, #6536d2);
 }
 
 header {
-    border: 1px solid grey;
     height: 100%;
-}
+    font-style: italic;
+ 	font-weight: bold;
+  	font-family: georgia, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    align-content: center;
+    margin-left: 10px;
+    color: #e0eff2;
+    text-shadow: 0 0 20px #000;
+}    
 
 .nav-section a{
     padding: 5px;
     margin-right: 20px;
     margin-left: -10px;
-    border: 1px solid greenyellow;
     border-radius: 3px;
     background-color: rgb(255, 226, 226);
 }
@@ -90,26 +96,28 @@ header {
 
 
 /* Main content style */
-
 .konten{
     padding-top: 40px;
-    border: yellow 3px solid;
     display: flex;
     justify-content: center;
     height: 700px;
 }
 
 article {
-    border: green 3px solid;
+    border: #0b165f 3px solid;
     margin-right: 50px;
     width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(20px);
 }
 
 .judul-konten {
     border: 2px gray solid;
     text-align: center;
     background-color: #3a50d9;
-    background-image: url(../wta.jpg);
+    background-image: url(../image/wta.jpg);
     background-size: cover;
     color: #e0eff2;
   	font-style: italic;
@@ -130,16 +138,87 @@ article {
 .gambar-konten {
     border: 2px grey solid;
     height: 250px;
-    background-image: url(../wlp.jpg);
+}
+
+.gambar-konten .img1 {
+    height: 250px;
+    background-image: url(../image/bg.jpg);
     background-position: center;
     background-size: cover;
 }
 
-.deskripsi-konten {
-    border: 2px solid grey;
-    
+
+.tombolBanner {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
+.tombolBanner button {
+    width: 200px;
+    margin: 10px;
+    font: 30px black bold sans-serif;
+    border-radius: 50px;
+}
+
+.tombolBanner button:hover {
+    color: blue;
+    background-color: #0b165f;
+    border-color: #3a50d9;
+}
+
+.deskripsi-konten {
+    display: flex;
+    background-size: 400% 400%;
+    justify-content: left;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.deskripsi-konten .dev-image {
+    border: 2px solid peru;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: -50px;
+    z-index: 1;
+}
+
+.deskripsi-konten .dev-image img {
+    width: 100%;
+}
+
+.deskripsi-konten .dev-info {
+    border: 2px solid rebeccapurple;
+    width: 50%;
+    height: 100px;
+    background: linear-gradient(blue,darkblue,purple);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-info h3 {
+    margin-top: -30px;
+    text-align: center;
+    font: 24px bold;
+    font-family:Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+.dev-info p {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: wheat;
+    text-align: center;
+}
+
+
+/* </> */
 
 /* Form Style */
 * {
@@ -264,16 +343,61 @@ article {
 /* </> */
 
 
-
+/* Package Style */
 .package {
     height: 300px;
     border: 3px darkmagenta solid;
+    background: linear-gradient(to right,#833ab4,#0004ff,#0099ff,#0004ff,#833ab4);
+    background-size: 400% 400%;
+    animation: bg2 10s ease-in-out infinite;
 }
 
-ul {
-    border: 3px blue solid;
+@keyframes bg2 {
+    0% {background-position: 0 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
 }
 
+.paket {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.paket button {
+    width: 200px;
+    height: 200px;
+}
+
+.paket button:first-child{
+    background-image: url(../image/left-button.jpg);
+    border-radius: 50%;
+}
+
+.paket button:first-child:active{
+    opacity: .7;
+}
+
+.paket button:last-child{
+    background-image: url(../image/arrow-button.jpg);
+    border-radius: 50%;
+}
+.paket button:last-child:active {
+    opacity: .7;
+}
+
+.package .paket .satu {
+    width: 475px;
+    height: 250px;
+    background: #fff;
+} 
+
+/* </> */
+
+
+/* Footer Style */
 footer {
     text-align: center;
     color: white;
@@ -282,4 +406,23 @@ footer {
     height: 80px;
     display: block;
     background-color: black;
+}
+
+footer h4 {
+    font-style: italic;
+ 	font-weight: bold;
+  	font-family: georgia, sans-serif;
+    font-size: 36px;
+}
+/* </> */
+
+
+
+@media screen and (max-width: 340px){
+
+}
+
+
+@media screen and (min-width: 576px) {
+
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
 
 <body>
     <nav>
-        <header>LOGO</header>
+        <header>MAXIVIA</header>
 
         <section class="nav-section">>
             <a href="">Home</a>
@@ -21,73 +22,93 @@
     <main class="konten">
         <article>
             <div class="judul-konten">
-            <h1>Maxivia Fantasy</h1>
-            <br>
-            <p class="plot">Thrown into a Fantasy World</p>
+                <h1>Maxivia Fantasy</h1>
+                <br>
+                <p class="plot">Thrown into a Fantasy World</p>
             </div>
 
-            <div class="gambar-konten"></div>
+            <div class="gambar-konten">
+                <div class="img1" id="banner"></div>
+                <div class="img2" id="banner"></div>
+                <div class="img3" id="banner"></div>
+            </div>
 
-            <div class="deskripsi-konten">deskripsi</div>
+            <div class="tombolBanner">
+                <button onclick="plusDivss(-1)">Previous</button>
+                <button onclick="plusDivss(1)">Next</button>
+            </div>
+
+            <div class="deskripsi-konten">
+
+                <div class="dev-image"><img src="image/Magic Circle.png"></div>
+                
+                <div class="dev-info">
+                    <h3>Lyon Athaly</h3>
+                    <p>Live in Fantasy</p>
+                </div>
+            </div>
         </article>
-        
+
         <section class="form">
             <div class="form-section">
                 <form action="">
                     <h1>Register</h1>
-    
+
                     <div class="inputbox">
                         <input type="text" placeholder="Username">
-                        <img src="User.png">
+                        <img src="image/User.png">
                     </div>
-    
+
                     <div class="inputbox">
                         <input type="email" placeholder="Email">
-                        <img src="Mail.png">
+                        <img src="image/Mail.png">
                     </div>
-    
+
                     <div class="inputbox">
                         <input type="password" placeholder="Password">
-                        <img src="lock.png">
+                        <img src="image/lock.png">
                     </div>
-    
+
                     <div class="inputbox">
                         <input type="password" placeholder="Confirm Password">
-                        <img src="badge check.png">
+                        <img src="image/badge check.png">
                     </div>
-    
-    
+
+
                     <div class="remember-forget">
                         <label><input type="checkbox">Remember Me</label>
-                        <!-- <a href="">Forget Password</a> -->
+
                     </div>
-    
-                    <button type="submit" class="btn">Register</button>
-    
+
+                    <button type="submit" class="btn" id="register">Register</button>
+
                     <div class="login-link">
-                        <p>Have an Account Already? <a href="">Login</a></p>
+                        <p>Have an Account Already? <a href="Login.html">Login</a></p>
                     </div>
                 </form>
-    
+
             </div>
         </section>
     </main>
-    
+
     <main class="package">
-        <ul>
-            <li>Character</li>
-            <li>Event</li>
-            <li>Map</li>
-        </ul>
+        <div class="paket">
+            <button onclick="plusDivs(-1)">Prev</button>
+            
+            <div class="satu"><img src="image/character.jpg"></div>
+            <div class="satu"><img src="image/fantasy-map.jpg"></div>
+
+            <button onclick="plusDivs(1)">Next</button>
+        </div>
     </main>
 
     <footer>
-        <h4>LOGO</h4>
-        <br>
-        <p>Term of Service  Privacy Policy</p>
+        <h4>MAXIVIA</h4>
+        <p>Term of Service Privacy Policy</p>
         <p>@2024 Maxivia</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>
