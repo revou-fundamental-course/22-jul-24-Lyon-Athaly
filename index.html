@@ -14,8 +14,8 @@
 
         <section class="nav-section">>
             <a href="">Home</a>
-            <a href="">Package</a>
-            <a href="">Follow Us</a>
+            <a href="#package">Package</a>
+            <a href="Login.html">Login</a>
         </section>
     </nav>
 
@@ -28,14 +28,14 @@
             </div>
 
             <div class="gambar-konten">
-                <div class="img1" id="banner"></div>
-                <div class="img2" id="banner"></div>
-                <div class="img3" id="banner"></div>
+                <div class="banner-konten img1"></div>
+                <div class="banner-konten img2"></div>
+                <div class="banner-konten img3"></div>
             </div>
 
             <div class="tombolBanner">
-                <button onclick="plusDivss(-1)">Previous</button>
-                <button onclick="plusDivss(1)">Next</button>
+                <button onclick="nextSlide(-1)">Previous</button>
+                <button onclick="nextSlide(1)">Next</button>
             </div>
 
             <div class="deskripsi-konten">
@@ -55,22 +55,22 @@
                     <h1>Register</h1>
 
                     <div class="inputbox">
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" id="user">
                         <img src="image/User.png">
                     </div>
 
                     <div class="inputbox">
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" id="email">
                         <img src="image/Mail.png">
                     </div>
 
                     <div class="inputbox">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="pass">
                         <img src="image/lock.png">
                     </div>
 
                     <div class="inputbox">
-                        <input type="password" placeholder="Confirm Password">
+                        <input type="password" placeholder="Confirm Password" id="Confirm">
                         <img src="image/badge check.png">
                     </div>
 
@@ -80,7 +80,7 @@
 
                     </div>
 
-                    <button type="submit" class="btn" id="register">Register</button>
+                    <button type="submit" class="btn" onclick="formValidation()">Register</button>
 
                     <div class="login-link">
                         <p>Have an Account Already? <a href="Login.html">Login</a></p>
@@ -91,12 +91,12 @@
         </section>
     </main>
 
-    <main class="package">
+    <main class="package" id="package">
         <div class="paket">
             <button onclick="plusDivs(-1)">Prev</button>
             
-            <div class="satu"><img src="image/character.jpg"></div>
-            <div class="satu"><img src="image/fantasy-map.jpg"></div>
+            <div class="gambar1 satu"></div>
+            <div class="gambar2 satu"></div>
 
             <button onclick="plusDivs(1)">Next</button>
         </div>

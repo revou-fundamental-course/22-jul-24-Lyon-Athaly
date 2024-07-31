@@ -52,15 +52,19 @@ table {
 body {
     background-image: url(../image/bg.jpg);
     background-position: center;
+    background-position-y: 50px;
     background-repeat: no-repeat;
+    background-color: #330a6a;
 }
 /* </> */
 
 /* Navigation style */
 nav {
+    border-bottom: 5px solid rgb(102, 56, 230);
     display: flex;
     justify-content: space-between;
     height: 50px;
+    width: 100%;
     margin: 0;
     padding: 5px;
     align-items: center;  
@@ -140,13 +144,26 @@ article {
     height: 250px;
 }
 
-.gambar-konten .img1 {
+.img1 {
     height: 250px;
     background-image: url(../image/bg.jpg);
     background-position: center;
     background-size: cover;
 }
 
+.img2 {
+    height: 250px;
+    background-image: url(../image/wta.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.img3 {
+    height: 250px;
+    background-image: url(../image/wlp.jpg);
+    background-position: center;
+    background-size: cover;
+}
 
 .tombolBanner {
     width: 100%;
@@ -366,6 +383,14 @@ article {
     align-content: center;
 }
 
+.paket .gambar1{
+    background-image: url(../image/fantasy-map.jpg);
+}
+
+.paket .gambar2 {
+    background-image: url(../image/character.jpg);
+}
+
 .paket button {
     width: 200px;
     height: 200px;
@@ -391,7 +416,7 @@ article {
 .package .paket .satu {
     width: 475px;
     height: 250px;
-    background: #fff;
+    
 } 
 
 /* </> */
@@ -418,11 +443,66 @@ footer h4 {
 
 
 
-@media screen and (max-width: 340px){
 
+@media screen and (max-width: 576px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100px;
+        width: 1000;
+    }
+    
+    /* Main content style */
+    .konten{
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        background-size: auto;
+    }
+
+    article {
+        margin: 0;
+        padding: 0;
+    }
+
+    .paket button {
+        width: 50px;
+        height: 50px;
+    }
+    
 }
 
+@media screen and (max-width: 730px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100px;
+        width: 1000;
+    }
+    
+    /* Main content style */
+    .konten{
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        background-size: auto;
+    }
 
-@media screen and (min-width: 576px) {
+    article {
+        margin: 0;
+        padding: 0;
+    }
 
+    .paket button {
+        width: 50px;
+        height: 50px;
+    }
 }
